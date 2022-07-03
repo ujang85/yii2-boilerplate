@@ -5,7 +5,7 @@ class m000000_000005_auth_item_child extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function up()
+    public function safeUp()
     {
         $tableOptions = null;
 
@@ -60,7 +60,7 @@ class m000000_000005_auth_item_child extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%auth_item_child}}');
     }

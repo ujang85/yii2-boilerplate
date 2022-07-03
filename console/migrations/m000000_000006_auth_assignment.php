@@ -5,7 +5,7 @@ class m000000_000006_auth_assignment extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function up()
+    public function safeUp()
     {
         $tableOptions = null;
 
@@ -34,7 +34,7 @@ class m000000_000006_auth_assignment extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%auth_assignment}}');
     }

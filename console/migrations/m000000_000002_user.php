@@ -5,7 +5,7 @@ class m000000_000002_user extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function up()
+    public function safeUp()
     {
         $tableOptions = null;
 
@@ -57,7 +57,7 @@ class m000000_000002_user extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%user}}');
     }

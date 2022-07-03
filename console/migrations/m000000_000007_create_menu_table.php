@@ -6,7 +6,7 @@ class m000000_000007_create_menu_table extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function up()
+    public function safeUp()
     {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
@@ -45,7 +45,7 @@ class m000000_000007_create_menu_table extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%menu}}');
     }

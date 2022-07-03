@@ -10,7 +10,7 @@ class m220702_012139_create_categories_table extends Migration
     /**
      * {@inheritdoc}
      */
-    public function up()
+    public function safeUp()
     {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
@@ -52,7 +52,7 @@ class m220702_012139_create_categories_table extends Migration
     /**
      * {@inheritdoc}
      */
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%categories}}');
     }

@@ -5,7 +5,7 @@ class m000000_000003_auth_rule extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function up()
+    public function safeUp()
     {
         $tableOptions = null;
 
@@ -25,7 +25,7 @@ class m000000_000003_auth_rule extends \yii\db\Migration
     /**
      * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%auth_rule}}');
     }
